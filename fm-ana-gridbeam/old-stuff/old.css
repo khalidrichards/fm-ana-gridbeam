@@ -1,0 +1,70 @@
+
+/* Container for the tiles */
+.tile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Base style for each tile */
+  .tile {
+    position: relative;
+    /* Ensures the tile stays square */
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Hover effect for extra dynamism */
+  .tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Primary color backgrounds */
+  .tile.red {
+    background-color: #FF4136; /* Red */
+  }
+  
+  .tile.blue {
+    background-color: #0074D9; /* Blue */
+  }
+  
+  .tile.yellow {
+    background-color: #FFDC00; /* Yellow */
+  }
+  
+  /* Styling for expanded state */
+  .tile.expanded {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Content inside a tile that appears on expansion */
+  .tile .content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+  
+  /* When a tile is expanded, reveal the content */
+  .tile.expanded .content {
+    opacity: 1;
+    max-height: 300px; /* Adjust based on your content needs */
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Fade in animation for the content */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

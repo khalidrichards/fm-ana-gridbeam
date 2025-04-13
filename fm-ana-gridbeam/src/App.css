@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Container for a parent tile and its subtiles */
+.tile-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Parent tile styles */
+.parent-tile {
+  position: relative;
+  width: 375px;
+  height: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+}
+
+/* Hover effect for parent tile */
+.parent-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Example primary color backgrounds for parent tiles */
+.parent-tile.red {
+  background-color: #FF4136; /* Red */
+}
+
+.parent-tile.green {
+  background-color: #2ECC40; /* Green */
+}
+
+.parent-tile.yellow {
+  background-color: #FFDC00; /* Yellow */
+}
+
+/* Container for subtiles that will appear in a row below the parent tile */
+.subtile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Subtile styles */
+.subtile {
+  width: 375px;
+  height: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+}
+
+/* Hover effect for subtiles */
+.subtile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Example primary color for subtiles */
+.subtile.blue {
+  background-color: #0074D9; /* Blue */
+}
+
+.subtile.purple {
+  background-color: #B10DC9; /* Purple */
+}
