@@ -39,12 +39,29 @@
   }
 }
 
+/* Full page container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Row that holds the initial tiles */
+.tile-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* allow wrapping on very small screens */
+}
+
 /* Container for a parent tile and its subtiles */
 .tile-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  min-width: 200px;
 }
 
 /* Parent tile styles */
@@ -88,9 +105,87 @@
   gap: 10px;
   margin-top: 10px;
 }
+/* Tile grid for builds */
+.subtile-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Build steps grid */
+.build-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 tiles per row */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Wrapper for the whole build area */
+.build-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Row that holds the build tile and the step tiles side-by-side */
+.build-main-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Steps immediately next to the clicked build */
+.build-steps-inline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Start with 2 per row after clicked tile */
+  gap: 20px;
+}
+
+/* Shared base tile styles */
+.tile-shared {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Subtile */
+.subtile {
+  background-size: cover;
+
+}
+
+/* Build step tile */
+.build-step-tile {
+  border: 4px solid;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Step images */
+.step-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Subtile hover */
+.subtile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
 /* Subtile styles */
-.subtile {
+/* .subtile {
   width: 375px;
   height: 375px;
   display: flex;
@@ -100,13 +195,13 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: #fff;
-}
+} */
 
 /* Hover effect for subtiles */
-.subtile:hover {
+/* .subtile:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* Example primary color for subtiles */
 .subtile.blue {
@@ -115,4 +210,53 @@
 
 .subtile.purple {
   background-color: #B10DC9; /* Purple */
+}
+
+/** Build Types **/
+.subtile.sitting {
+  background-color: #f747c3; /* Pink */
+}
+
+.subtile.surfaces {
+  background-color: #079347; /* Green */
+}
+
+.subtile.storage {
+  background-color: #005cff; /* Blue */
+}
+
+
+/* .build-steps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+} */
+
+/* .build-step-tile {
+  width: 150px;
+  height: 150px;
+  border: 4px solid;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+} */
+
+.build-step-tile.sitting {
+  border-color: #f747c3; /* Pink */
+}
+
+.build-step-tile.surfaces {
+  border-color: #079347; /* Green */
+}
+
+.build-step-tile.storage {
+  border-color: #005cff; /* Blue */
+}
+
+.step-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
