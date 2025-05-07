@@ -5,7 +5,7 @@ const buildTypes = {
 };
 
 const setSubtileColor = (buildName) => {
-    return `tile-shared subtile ${buildTypes[buildName]}`;
+    return `tile-shared build-step-tile ${buildTypes[buildName]}`;
   }
 
 const setBuildTileStyle = (buildName) => {

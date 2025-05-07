@@ -1,17 +1,15 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { setSubtileColor, setBuildTileStyle } from '../helpers/css_style_helper';
+import BuildStep from './build/BuildStep';
+import CoverPage from './build/CoverPage';
 
 export default function Build({ build, isActive, onClick }) {
     return (
         <div className="build-wrapper">
           <div className="build-main-row">
-            {/* The build tile itself */}
-            <div
-              className={ setSubtileColor(build.title) }
-              onClick={onClick}
-            >
-              <div className="subtile-overlay">{build.title}</div>
+            {/* Cover page */}
+            <CoverPage build={build} onClick={onClick} />
           </div>
     
           {/* Step tiles */}
@@ -23,15 +21,18 @@ export default function Build({ build, isActive, onClick }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
+                hi
                 {build.steps.map((stepImage, idx) => (
-                  <div key={idx} className={ setBuildTileStyle(build.title) }>
-                    <img src={stepImage} alt={`Step ${idx + 1}`} className="step-image" />
-                  </div>
+                  <BuildStep
+                    key={idx}
+                    build={build}
+                    stepImage={stepImage}
+                    stepNumber={idx + 1}
+                  />
                 ))}
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
         </div>
       );
 }
