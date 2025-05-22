@@ -1,4 +1,4 @@
-/* Images for the build */
+/* This contains instructions for building a chair */
 import chairCoverImage from '../../images/chair/cover.jpg';
 import chairStepOne from '../../images/chair/chair_step_1.png';
 import chairStepTwo from '../../images/chair/chair_step_2.jpg';

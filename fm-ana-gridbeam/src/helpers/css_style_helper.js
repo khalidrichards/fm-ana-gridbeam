@@ -1,7 +1,7 @@
 const buildTypes = {
     Chair: 'sitting',
     Table: 'surfaces',
-    Bed: 'sitting',
+    Bed: 'resting',
 };
 
 const setSubtileColor = (buildName) => {

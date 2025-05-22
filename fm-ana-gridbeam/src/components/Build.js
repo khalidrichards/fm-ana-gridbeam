@@ -10,6 +10,7 @@ export default function Build({ build, isActive, onClick }) {
             <div
               className={ setSubtileColor(build.title) }
               onClick={onClick}
+              style={{ backgroundImage: `url(${build.cover_image})` }}
             >
               <div className="subtile-overlay">{build.title}</div>
           </div>

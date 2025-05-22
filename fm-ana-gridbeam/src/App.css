@@ -154,6 +154,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  font-family: 'PT Mono', monospace;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -225,7 +226,6 @@
   background-color: #005cff; /* Blue */
 }
 
-
 /* .build-steps-grid {
   display: flex;
   flex-wrap: wrap;
@@ -253,6 +253,10 @@
 
 .build-step-tile.storage {
   border-color: #005cff; /* Blue */
+}
+
+.build-step-tile.resting {
+  background-color: #ed7b22; /* Orange */
 }
 
 .step-image {

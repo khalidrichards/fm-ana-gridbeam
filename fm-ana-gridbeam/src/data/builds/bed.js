@@ -1,4 +1,4 @@
-/* Images for the build */
+/* This contains the instructions for building a bed. */
 import bedCoverImage from '../../images/bed/cover.jpg';
 import bedStepOne from '../../images/bed/bed_step_1.png';
 import bedStepTwo from '../../images/bed/bed_step_2.png';
@@ -13,7 +13,7 @@ import bedStepTen from '../../images/bed/bed_step_10.png';
 
 const bed = {
     title: 'Bed',
-    type: 'sitting',
+    type: 'resting',
     cover_image: bedCoverImage,
     steps: [
         bedStepOne,
