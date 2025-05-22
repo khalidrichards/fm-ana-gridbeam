@@ -279,6 +279,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  font-family: 'PT Mono', monospace;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -323,6 +324,9 @@
 }
 .build-step-tile.storage {
   border-color: #005cff;
+}
+.build-step-tile.resting {
+  background-color: #ed7b22;
 }
 .step-image {
   width: 100%;
