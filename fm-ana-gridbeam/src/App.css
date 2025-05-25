@@ -159,18 +159,9 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* Subtile */
-.subtile {
-  background-size: cover;
 
-}
 
-/* Build step tile */
-.build-step-tile {
-  border: 4px solid;
-  overflow: hidden;
-  background: #fff;
-}
+
 
 /* Step images */
 .step-image {
@@ -179,11 +170,7 @@
   object-fit: cover;
 }
 
-/* Subtile hover */
-.subtile:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+
 
 /* Subtile styles */
 /* .subtile {
@@ -203,6 +190,17 @@
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 } */
+/* Subtile */
+.subtile {
+  background-size: cover;
+  border: 4px solid;
+}
+
+/* Subtile hover */
+.subtile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
 /* Example primary color for subtiles */
 .subtile.blue {
@@ -226,6 +224,10 @@
   background-color: #005cff; /* Blue */
 }
 
+.subtile.resting {
+  background-color: #ed7b22; /* Orange */
+}
+
 /* .build-steps-grid {
   display: flex;
   flex-wrap: wrap;
@@ -243,6 +245,13 @@
   background: #fff;
 } */
 
+/* Build step tile */
+.build-step-tile {
+  border: 4px solid;
+  overflow: hidden;
+  background: #fff;
+}
+
 .build-step-tile.sitting {
   border-color: #f747c3; /* Pink */
 }
@@ -256,7 +265,7 @@
 }
 
 .build-step-tile.resting {
-  background-color: #ed7b22; /* Orange */
+  border-color: #ed7b22; /* Orange */
 }
 
 .step-image {
