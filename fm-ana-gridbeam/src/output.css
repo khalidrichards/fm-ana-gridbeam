@@ -243,10 +243,10 @@
   background-color: #FF4136;
 }
 .parent-tile.green {
-  background-color: #2ECC40;
+  background-color: #00674F;
 }
 .parent-tile.yellow {
-  background-color: #FFDC00;
+  background-color: #DAA520;
 }
 .subtile-container {
   display: flex;

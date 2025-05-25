@@ -107,11 +107,11 @@
 }
 
 .parent-tile.green {
-  background-color: #2ECC40; /* Green */
+  background-color: #00674F; /* Green */
 }
 
 .parent-tile.yellow {
-  background-color: #FFDC00; /* Yellow */
+  background-color: #DAA520; /* Yellow */
 }
 
 /* Container for subtiles that will appear in a row below the parent tile */
