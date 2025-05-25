@@ -9,6 +9,13 @@
   pointer-events: none;
 }
 
+body {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px; /* Size of the squares */
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -107,11 +114,11 @@
 }
 
 .parent-tile.green {
-  background-color: #2ECC40; /* Green */
+  background-color: #00674F; /* Green */
 }
 
 .parent-tile.yellow {
-  background-color: #FFDC00; /* Yellow */
+  background-color: #DAA520; /* Yellow */
 }
 
 /* Container for subtiles that will appear in a row below the parent tile */
