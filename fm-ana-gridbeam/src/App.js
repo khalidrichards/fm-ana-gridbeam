@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TileSection from './components/TileSection';
 import Build from './components/Build';
 import { chair, bed, table } from './data/builds';
+import banner from './images/banner.jpg';
 import './output.css';
 
 // You can create more builds like "table", "bed" similarly
@@ -28,6 +29,9 @@ export default function App() {
 
   return (
     <div className="page-container">
+      <div className="banner-container">
+        <img src={ banner } alt="Gridbeam Banner" className="banner-image"></img>
+      </div>
       <div className="tile-row">
         {/* If there is no active tile, render all tiles */}
         {!activeTile && (

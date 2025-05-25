@@ -47,6 +47,23 @@
   padding: 40px;
 }
 
+/* Banner Area */
+.banner-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.banner-image {
+  width: 450px;
+  max-width: 900px;
+  height: 450px; /* match parent-tile height */
+  object-fit: cover;
+  border-radius: 12px; /* optional, but makes it look polished */
+}
+
 /* Row that holds the initial tiles */
 .tile-row {
   display: flex;
