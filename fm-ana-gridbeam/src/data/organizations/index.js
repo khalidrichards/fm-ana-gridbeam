@@ -1,4 +1,9 @@
 import ana from './ana';
 import fm from './fm';
 
-export { ana, fm };
+const organizations = [
+    ana,
+    fm,
+];
+
+export default organizations;
