@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import TileSection from './components/TileSection';
 import Build from './components/Build';
+import OrganizationCard from './components/OrganizationCard';
 import { chair, bed, table } from './data/builds';
+import organizations from './data/organizations';
 import banner from './images/banner.jpg';
 import './output.css';
 
@@ -10,6 +12,7 @@ import './output.css';
 export default function App() {
   const [activeTile, setActiveTile] = useState(null);
   const [activeBuild, setActiveBuild] = useState(null);
+  const [expandedOrg, setExpandedOrg] = useState(null);
 
   const handleTileClick = (tileName) => {
     if (tileName !== 'Builds') {
@@ -122,12 +125,31 @@ export default function App() {
           active={activeTile === 'About Us'}
           onClick={() => handleTileClick('About Us')}
         >
-          <div className="tile-shared subtile" style={{ backgroundColor: '#B10DC9' }}>
-            Architecture and Advocacy
-          </div>
-          <div className="tile-shared subtile" style={{ backgroundColor: '#B10DC9' }}>
-            Flatbush Mixtape
-          </div>
+          {!expandedOrg ? (
+                <div className="subtile-grid">
+                  {organizations.map((org) => (
+                    <OrganizationCard
+                      key={org.title}
+                      org={org}
+                      isExpanded={false}
+                      onClick={(org) => setExpandedOrg(org)}
+                    />
+                  ))}
+                </div>
+          ) : (
+            <div className="selected-org">
+              {organizations.map((org) =>
+                expandedOrg.name === org.name ? (
+                  <OrganizationCard
+                    key={org.title}
+                    org={org}
+                    isExpanded={true}
+                    onBack={() => setExpandedOrg(null)}
+                  />
+                ) : null
+              )}
+            </div>
+          )}
         </TileSection>)}
       </div>
     </div>
