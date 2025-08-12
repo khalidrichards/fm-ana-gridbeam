@@ -1,4 +1,4 @@
-import React, { act, useState } from 'react';
+import React, { useState } from 'react';
 import TileSection from './components/TileSection';
 import Build from './components/Build';
 import OrganizationCard from './components/OrganizationCard';
