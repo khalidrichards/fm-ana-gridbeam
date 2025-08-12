@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { act, useState } from 'react';
 import TileSection from './components/TileSection';
 import Build from './components/Build';
 import OrganizationCard from './components/OrganizationCard';
@@ -15,13 +15,10 @@ export default function App() {
   const [expandedOrg, setExpandedOrg] = useState(null);
 
   const handleTileClick = (tileName) => {
-    if (tileName !== 'Builds') {
-      setActiveTile(tileName);
-      setActiveBuild(null);
-    } else {
-      setActiveTile(activeTile === tileName ? null : tileName);
-      setActiveBuild(null);
-    }
+    const newActiveTile = tileName === activeTile ? null : tileName;
+    setActiveTile(newActiveTile);
+    setActiveBuild(null); // TODO: Leave this behavior as part of a larger build component.
+    setExpandedOrg(null); // TODO: Leave this behavior as part of a larger org component.
   };
 
   const builds = [
